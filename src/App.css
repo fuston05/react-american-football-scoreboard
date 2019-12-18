@@ -5,11 +5,10 @@
 
 .scoreboard {
   width: 58%;
-  margin: 10rem auto;
+  margin: 2rem auto 2rem auto;
   background-color: #0b5402;
   color: white;
   border-radius: 0.5rem;
-  margin-top: 10rem;
   padding: 5rem;
   border: 4px solid #aaaaaa;
   box-shadow: 5px 10px 15px #000;
@@ -113,6 +112,10 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+}
+
+.upperButtons{
+  text-align: center;
 }
 
 .homeButtons__touchdown,

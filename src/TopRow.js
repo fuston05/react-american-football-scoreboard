@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Timer from "./Timer";
 
 const TopRow= (props) => {
     return(
@@ -11,7 +12,9 @@ const TopRow= (props) => {
 
                 <div className="home__score">{props.homeScore}</div>
             </div>
-            <div className="timer">00:03</div>
+
+            <Timer />
+
             <div className="away">
                 <h2 className="away__name">Tigers</h2>
                 <div className="away__score">{props.awayScore}</div>
