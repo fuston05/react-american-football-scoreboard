@@ -19,6 +19,14 @@ const BottomRow = (props) => {
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
         <div className="quarter__value">{props.quarter}</div>
+
+        {/* Stretch: button to increment quarter */}
+        <button className="quarterBtn" onClick= {() => {
+          //limit quarters to 4 or rest to 0
+          props.quarter === 4 ? props.setQuarter(0) : props.setQuarter(props.quarter +1)
+          }}>Add Quarter
+        </button>
+
       </div>
     </div>
   );

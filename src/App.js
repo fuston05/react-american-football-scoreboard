@@ -15,14 +15,11 @@ function App() {
         
         {/* stretch: separate into smaller components */}
         <TopRow homeScore= {homeScore} awayScore= {awayScore} />
-        <BottomRow quarter= {quarter} />
+        <BottomRow quarter= {quarter} setQuarter= {setQuarter} />
       </section>
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-
-          {/* Stretch: button to increment quarter */}
-          <button className="quarter" onClick= {() => {setQuarter(quarter +1)}}>Set Quarter</button>
           <button className="homeButtons__touchdown" onClick= {() => {setHomeScore(homeScore + 7)}}>Home Touchdown</button>
           <button className="homeButtons__fieldGoal" onClick= {() => {setHomeScore(homeScore + 3)}}>Home Field Goal</button>
         </div>
