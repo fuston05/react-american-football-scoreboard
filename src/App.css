@@ -12,6 +12,7 @@
   margin-top: 10rem;
   padding: 5rem;
   border: 4px solid #aaaaaa;
+  box-shadow: 5px 10px 15px #000;
 }
 
 .topRow {
@@ -118,7 +119,12 @@
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
 .awayButtons__fieldGoal , 
-.quarterBtn{
+.bottomRowBtn{
   margin: 1rem;
   border-radius: 4px;
+  box-shadow: 5px 5px 15px #000;
+}
+
+.bottomRowBtn{
+  border: 1px solid #000;
 }
