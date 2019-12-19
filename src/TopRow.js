@@ -13,7 +13,7 @@ const TopRow= (props) => {
                 <div className="home__score">{props.homeScore}</div>
             </div>
 
-            <Timer timerRunning={props.timerRunning} />
+            <Timer timerRunning={props.timerRunning} resetTimer= {props.resetTimer} />
 
             <div className="away">
                 <h2 className="away__name">Tigers</h2>

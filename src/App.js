@@ -12,14 +12,15 @@ function App() {
   const [ballOn, setBallOn]= useState(0);
   const [toGo, setToGo]= useState(10);
   const [down, setDown]= useState(1);
-  const [timerRunning, setTimerRunning]= useState(true);
+  const [timerRunning, setTimerRunning]= useState(false);
+  const [resetTimer, setResetTimer]= useState(false);
 
   return (
     <div className="container">
       <section className="scoreboard">
         
         {/* stretch: separate into smaller components */}
-        <TopRow timerRunning= {timerRunning} homeScore= {homeScore} awayScore= {awayScore} />
+        <TopRow resetTimer= {resetTimer} timerRunning= {timerRunning} homeScore= {homeScore} awayScore= {awayScore} />
 
         <BottomRow 
         quarter= {quarter} setQuarter= {setQuarter} 
@@ -29,7 +30,17 @@ function App() {
         />
       </section>
       <section class= "upperButtons">
+        <button class= 'startTimerBtn bottomRowBtn' onClick= { () => {
+          if(timerRunning === false){
+            setResetTimer(false)
+            setTimerRunning(true);
+          }else{
+            setTimerRunning(false);
+          }//end if
+        } } >Start/Pause Timer</button>
+
         <button class= "resetBtn bottomRowBtn" onClick= { () => {
+          setResetTimer(true)
           setTimerRunning(false)
           setBallOn(0)
           setToGo(10)

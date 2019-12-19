@@ -10,8 +10,8 @@ const Timer= function(props){
     
 
     useEffect( () => {
-        if(props.timerRunning === true){
-            // console.log('is timer running: '+props.timerRunning);
+        if(props.timerRunning === true && props.resetTimer === false){
+            //start/stop timer based on 'timerRunning'
             let interval= setInterval( () => {
                 
                 if( secOnes === 0 ){
@@ -34,14 +34,17 @@ const Timer= function(props){
     
                 clearInterval(interval);
             }, 1000);//end setInterval
-
         }else{
+
+        }//if timerRunning
+
+        //reset Timer
+        if(props.resetTimer === true){
             setSecOnes(0)
             setSecTens(0)
-            setMinOnes(0)
-            setMinTens(0)
-            // console.log('timerRunning is false')
-        }//end if timerRunning
+            setMinOnes(5)
+            setMinTens(1)
+        }//if resetTimer
         
     } );//end useEffect
 
