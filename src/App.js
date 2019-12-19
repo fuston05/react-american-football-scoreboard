@@ -29,8 +29,8 @@ function App() {
         down= {down} setDown={setDown}
         />
       </section>
-      <section class= "upperButtons">
-        <button class= 'startTimerBtn bottomRowBtn' onClick= { () => {
+      <section className= "upperButtons">
+        <button className= 'startTimerBtn bottomRowBtn' onClick= { () => {
           if(timerRunning === false){
             setResetTimer(false)
             setTimerRunning(true);
@@ -39,7 +39,7 @@ function App() {
           }//end if
         } } >Start/Pause Timer</button>
 
-        <button class= "resetBtn bottomRowBtn" onClick= { () => {
+        <button className= "resetBtn bottomRowBtn" onClick= { () => {
           setResetTimer(true)
           setTimerRunning(false)
           setBallOn(0)

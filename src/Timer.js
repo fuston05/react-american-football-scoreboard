@@ -46,15 +46,15 @@ const Timer= function(props){
             setMinTens(1)
         }//if resetTimer
         
-    } );//end useEffect
+    }, [secOnes, secTens, minOnes, minTens, props.timerRunning,props.resetTimer] );//end useEffect
 
     return(
     <div className="timer">
-        <span class= 'minTens'>{minTens}</span>
-        <span class= 'minOnes'>{minOnes}</span>
+        <span className= 'minTens'>{minTens}</span>
+        <span className= 'minOnes'>{minOnes}</span>
         <span>:</span>
-        <span class= 'secTens'>{secTens}</span>
-        <span class= 'secOnes'>{secOnes}</span>
+        <span className= 'secTens'>{secTens}</span>
+        <span className= 'secOnes'>{secOnes}</span>
         {/* 00:03 */}
     </div>
     );//end return
