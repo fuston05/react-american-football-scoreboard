@@ -12,14 +12,15 @@ function App() {
   const [ballOn, setBallOn]= useState(0);
   const [toGo, setToGo]= useState(10);
   const [down, setDown]= useState(1);
-  const [timerRunning, setTimerRunning]= useState(false);
+  const [timerRunning, setTimerRunning]= useState(true);
 
   return (
     <div className="container">
       <section className="scoreboard">
         
         {/* stretch: separate into smaller components */}
-        <TopRow homeScore= {homeScore} awayScore= {awayScore} />
+        <TopRow timerRunning= {timerRunning} homeScore= {homeScore} awayScore= {awayScore} />
+
         <BottomRow 
         quarter= {quarter} setQuarter= {setQuarter} 
         ballOn= {ballOn} setBallOn= {setBallOn}
@@ -29,6 +30,7 @@ function App() {
       </section>
       <section class= "upperButtons">
         <button class= "resetBtn bottomRowBtn" onClick= { () => {
+          setTimerRunning(false)
           setBallOn(0)
           setToGo(10)
           setDown(1)
@@ -38,6 +40,7 @@ function App() {
         } } >
           Reset scoreboard</button>
       </section>
+
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
