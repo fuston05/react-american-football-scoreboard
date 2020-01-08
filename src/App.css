@@ -5,13 +5,14 @@
 
 .scoreboard {
   width: 58%;
-  margin: 10rem auto;
+  margin: 2rem auto 2rem auto;
   background-color: #0b5402;
+  background-image: url('./images/greenBg.png');
   color: white;
   border-radius: 0.5rem;
-  margin-top: 10rem;
   padding: 5rem;
   border: 4px solid #aaaaaa;
+  box-shadow: 5px 10px 15px #000;
 }
 
 .topRow {
@@ -71,12 +72,15 @@
   background-color: var(--black);
   border: 2px solid white;
   border-radius: 6px;
+  width: 32%;
+
 }
 
 .bottomRow {
   display: flex;
   justify-content: space-around;
   place-items: center;
+  align-items: baseline;
   height: 20rem;
 }
 
@@ -107,16 +111,26 @@
 }
 
 .buttons {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
 
+.upperButtons{
+  text-align: center;
+}
+
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
-.awayButtons__fieldGoal {
+.awayButtons__fieldGoal , 
+.bottomRowBtn{
   margin: 1rem;
   border-radius: 4px;
+  box-shadow: 5px 5px 15px #000;
+}
+
+.bottomRowBtn{
+  border: 1px solid #000;
 }
